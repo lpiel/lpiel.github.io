@@ -18,8 +18,14 @@
                             {% if post.description %}
                                 <p>{{ post.description }}</p>
                             {% endif %}
-                            <p>{{ post.category }}</p>
-                            <p>{{ post.content }}</p>
+
+                            {% if post.category %}
+                                <p>Category: {{ post.category }}</p>
+                            {% endif %}
+
+                            {% if post.content %}
+                                <p>{{ post.content }}</p>
+                            {% endif %}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
